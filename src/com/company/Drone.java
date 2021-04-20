@@ -8,14 +8,19 @@ public class Drone extends Bee {
 
     @Override
     public void Damage(int value) {
+        float sum = 0;
         if(value > 100 || value < 0) {
             throw new IllegalArgumentException("Please enter a value between 0 - 100");
         }
-        else if(super.getHealth() <= 70) {
-            printMessage();
-        }
         else {
-            setHealth(getHealth() - value);
+            super.setHealth(super.getHealth() - value);
+            sum = super.getHealth();
+            if(sum < 70) {
+                printMessage();
+            }
+            else  {
+                System.out.println(sum);
+            }
         }
     }
 

@@ -1,10 +1,14 @@
 package com.company;
 
  abstract public class Bee {
+
     private float health = 100;
+
+    private boolean isDead = false;
 
     public Bee(float health) {
         this.health = 100;
+
     }
 
     public void setHealth(float health) {
@@ -16,6 +20,9 @@ package com.company;
     }
 
     public abstract void Damage(int value);
+
+    public abstract void printMessage();
+
 
 
 

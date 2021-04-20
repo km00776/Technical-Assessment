@@ -11,12 +11,17 @@ public class Drone extends Bee {
         if(value > 100 || value < 0) {
             throw new IllegalArgumentException("Please enter a value between 0 - 100");
         }
-        else if(super.getHealth() < 70) {
-            super.setHealth(-1);
+        else if(super.getHealth() <= 70) {
+            printMessage();
         }
         else {
-            super.setHealth(super.getHealth() - value);
+            setHealth(getHealth() - value);
         }
+    }
+
+    @Override
+    public void printMessage() {
+        System.out.println("Dead");
     }
 
 }

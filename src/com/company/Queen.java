@@ -12,9 +12,9 @@ public class Queen extends Bee {
             throw new IllegalArgumentException("Please enter a value between 0 - 100");
         }
         else {
-            setHealth(getHealth() - value);
-            sum = getHealth();
-            if(sum < 70) {
+            super.setHealth(super.getHealth() - value);
+             sum = super.getHealth();
+            if(sum < 20) {
                 printMessage();
             }
             else  {

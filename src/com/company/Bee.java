@@ -4,7 +4,8 @@ package com.company;
 
     private float health = 100;
 
-    private boolean isDead = false;
+    // Should this be needed?
+//    private boolean isDead = false;
 
     public Bee(float health) {
         this.health = 100;
@@ -21,7 +22,7 @@ package com.company;
 
     public abstract void Damage(int value);
 
-    public abstract void printMessage();
+
 
 
 

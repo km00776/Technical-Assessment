@@ -11,11 +11,14 @@ public class Queen extends Bee {
         if(value > 100 || value < 0) {
             throw new IllegalArgumentException("Please enter a value between 0 - 100");
         }
+        else if(super.getHealth() < 20) {
+            System.out.println("Dead");
+        }
         else {
             super.setHealth(super.getHealth() - value);
-             sum = super.getHealth();
+            sum = super.getHealth();
             if(sum < 20) {
-                printMessage();
+                System.out.println("Dead");
             }
             else  {
                 System.out.println(sum);
@@ -23,10 +26,7 @@ public class Queen extends Bee {
         }
     }
 
-    @Override
-    public void printMessage() {
-        System.out.println("Dead");
-    }
+
 
 
 }

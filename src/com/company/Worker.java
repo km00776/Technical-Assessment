@@ -2,8 +2,8 @@ package com.company;
 
 public class Worker extends Bee {
     private int health = 100;
-    public Worker(float health) {
-        super(health);
+    public Worker(float health, boolean isAlive) {
+        super(health, isAlive);
 
     }
     @Override

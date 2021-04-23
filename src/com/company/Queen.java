@@ -1,8 +1,8 @@
 package com.company;
 
 public class Queen extends Bee {
-    public Queen(float health) {
-        super(health);
+    public Queen(float health, boolean isAlive) {
+        super(health, isAlive);
     }
 
     @Override

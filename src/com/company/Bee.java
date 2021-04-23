@@ -2,15 +2,23 @@ package com.company;
 
  abstract public class Bee {
 
-    private float health = 100;
+     private float health = 0;
+     private boolean isAlive = true;
 
-    // Should this be needed?
-//    private boolean isDead = false;
 
-    public Bee(float health) {
+    public Bee(float health, boolean isAlive) {
         this.health = 100;
-
+        this.isAlive = isAlive;
     }
+
+
+     public boolean isAlive() {
+         return isAlive;
+     }
+
+     public void setAlive(boolean alive) {
+         isAlive = alive;
+     }
 
     public void setHealth(float health) {
         this.health = health;

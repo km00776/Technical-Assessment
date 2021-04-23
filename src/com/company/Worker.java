@@ -1,7 +1,6 @@
 package com.company;
 
 public class Worker extends Bee {
-    private int health = 100;
     public Worker(float health, boolean isAlive) {
         super(health, isAlive);
 
@@ -12,13 +11,18 @@ public class Worker extends Bee {
         if(value > 100 || value < 0) {
             throw new IllegalArgumentException("Please enter a value between 0 - 100");
         }
-        else if(super.getHealth() < 20) {
+        else if(super.getHealth() < 70) {
             System.out.println("Dead");
+            super.setAlive(false);
         }
         else {
             this.setHealth(super.getHealth() - value);
             sum = super.getHealth();
-            if(sum < 20) {
+            if(sum < 0) {
+                super.setAlive(false);
+                setHealth(0);
+            }
+            if(sum < 70 && sum >= 0) {
                 System.out.println("Dead");
             }
             else  {

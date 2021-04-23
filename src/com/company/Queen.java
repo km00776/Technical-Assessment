@@ -13,12 +13,19 @@ public class Queen extends Bee {
         }
         else if(super.getHealth() < 20) {
             System.out.println("Dead");
+            super.setAlive(false);
         }
+
         else {
             super.setHealth(super.getHealth() - value);
             sum = super.getHealth();
-            if(sum < 20) {
+            if(sum < 0) {
+                super.setAlive(false);
+                setHealth(0);
+            }
+            if(sum < 20 && sum >= 0) {
                 System.out.println("Dead");
+                super.setAlive(false);
             }
             else  {
                 System.out.println(sum);

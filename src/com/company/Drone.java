@@ -19,14 +19,14 @@ public class Drone extends Bee {
         else {
             super.setHealth(super.getHealth() - value);
             sum = super.getHealth();
-            if(sum < 20) {
+            if(sum < 0) {
+                super.setAlive(false);
+                setHealth(0);
+            }
+            else if(sum < 50 && sum >= 0) {
                 System.out.println("Dead");
                 super.setAlive(false);
             }
-//            if(sum < 0) {
-//                super.setAlive(false);
-//                setHealth(0);
-//            }
             else  {
                 System.out.println(sum);
             }

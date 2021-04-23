@@ -20,15 +20,15 @@ package com.company;
          isAlive = alive;
      }
 
-    public void setHealth(float health) {
+     public void setHealth(float health) {
         this.health = health;
     }
 
-    public float getHealth() {
+     public float getHealth() {
         return health;
     }
 
-    public abstract void Damage(int value);
+     public abstract void Damage(int value);
 
 
 
